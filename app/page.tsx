@@ -6,15 +6,15 @@ import { useState, useRef, useEffect } from 'react';
 
 export default function Home() {
   const [show, setShow] = useState('');
-  const [offset, setOffset] = useState();
+  const [offset, setOffset] = useState('');
 
-  let wrapperRef = useRef();
+  let wrapperRef = useRef<any>(null);
 
   useEffect(() => {
-    setOffset(wrapperRef.current.offsetLeft);
+    setOffset(wrapperRef.current?.offsetLeft);
 
     function handleResize() {
-      setOffset(wrapperRef.current.offsetLeft);
+      setOffset(wrapperRef.current?.offsetLeft);
     }
 
     window.addEventListener('resize', handleResize);
@@ -101,7 +101,7 @@ export default function Home() {
                 href="https://starburst.io"
                 target="_blank"
                 rel="noopener"
-                className="text-[#478527] shadow-[0_1px_0_0_#478527] hover:shadow-none"
+                className="text-[#478527] dark:text-[#90ce70] shadow-[0_1px_0_0_#478527] dark:shadow-[0_1px_0_0_#90ce70] hover:shadow-none dark:hover:shadow-none"
               >
                 Starburst Data
               </a>{' '}
@@ -120,7 +120,7 @@ export default function Home() {
                 href="https://robinpowered.com"
                 target="_blank"
                 rel="noopener"
-                className="text-[#478527] shadow-[0_1px_0_0_#478527] hover:shadow-none"
+                className="text-[#478527] dark:text-[#90ce70] shadow-[0_1px_0_0_#478527] dark:shadow-[0_1px_0_0_#90ce70] hover:shadow-none dark:hover:shadow-none"
               >
                 Robin Powered
               </a>{' '}
@@ -136,7 +136,7 @@ export default function Home() {
                 href="https://hellobonfire.com"
                 target="_blank"
                 rel="noopener"
-                className="text-[#478527] shadow-[0_1px_0_0_#478527] hover:shadow-none"
+                className="text-[#478527] dark:text-[#90ce70] shadow-[0_1px_0_0_#478527] dark:shadow-[0_1px_0_0_#90ce70] hover:shadow-none dark:hover:shadow-none"
               >
                 Bonfire Studios
               </a>{' '}
@@ -354,7 +354,7 @@ export default function Home() {
               height={show === 'crowdsurfer' ? 'auto' : 0}
               style={{
                 marginBottom: show === 'crowdsurfer' ? 32 : 0,
-                backgroundColor: '#0F0F0F',
+                backgroundColor: '#171717',
                 left: `calc(-${offset + 52}px)`,
                 position: 'relative',
               }}
@@ -492,7 +492,7 @@ export default function Home() {
             I can be reached by e-mail at
             <a
               href="mailto:FraserKC@gmail.com"
-              className="text-[#478527] shadow-[0_1px_0_0_#478527] hover:shadow-none pl-[0.5ch]"
+              className="text-[#478527] dark:text-[#90ce70] shadow-[0_1px_0_0_#478527] dark:shadow-[0_1px_0_0_#90ce70] hover:shadow-none dark:hover:shadow-none pl-[0.5ch]"
             >
               FraserKC@gmail.com
             </a>
