@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Button, List, Process, ThemeToggle } from '@/components';
+import { AudioPlayer, Button, List, Process, ThemeToggle } from '@/components';
 import { useState, useRef, useEffect } from 'react';
 
 export default function Home() {
@@ -52,7 +52,10 @@ export default function Home() {
                 className="fill-[#444] dark:fill-white"
               />
             </svg>
-            <ThemeToggle />
+            <div className="flex gap-[1rem] items-center">
+              <AudioPlayer />
+              <ThemeToggle />
+            </div>
           </div>
           <h1 className="font-outfit font-bold tracking-wide text-2xl mt-8">
             Kyle Fraser
