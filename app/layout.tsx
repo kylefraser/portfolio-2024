@@ -26,9 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${ptserif.variable} ${outfit.variable}`}>
-      <body className={'bg-white dark:bg-[#0e100a]'}>
-        <Providers>{children}</Providers>
+    <html
+      lang="en"
+      className={`${ptserif.variable} ${outfit.variable}`}
+      style={{ scrollbarGutter: 'stable' }}
+    >
+      <body className={'bg-white dark:bg-[#0e100a] overflow-x-hidden'}>
+        <div id="root">
+          <Providers>{children}</Providers>
+        </div>
       </body>
     </html>
   );

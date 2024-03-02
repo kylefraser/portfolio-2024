@@ -6,11 +6,11 @@ const Process = ({ children, height, offset, show, ...props }: any) => {
       offset={offset}
       height={height}
       duration={250}
-      className={`md:w-[100vw] w-[110vw] relative overflow-hidden`}
+      className={`md:w-[100vw] w-[calc(100vw+1.25rem)] relative overflow-hidden`}
       {...props}
     >
       <div
-        className={`flex flex-col w-[calc(100vw-52px-1.25rem)] md:w-full max-w-6xl relative py-10`}
+        className={`flex flex-col w-[calc(100vw-52px-1.25rem)] md:w-full max-w-5xl relative py-10`}
         style={{ left: offset + 52 + 'px' }}
       >
         {children}

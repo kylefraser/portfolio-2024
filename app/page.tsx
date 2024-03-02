@@ -3,6 +3,11 @@
 import Image from 'next/image';
 import { AudioPlayer, Button, List, Process, ThemeToggle } from '@/components';
 import { useState, useRef, useEffect } from 'react';
+import dynamic from 'next/dynamic';
+
+const Gallery = dynamic(() => import('../components/Gallery/Gallery'), {
+  ssr: false,
+});
 
 export default function Home() {
   const [show, setShow] = useState('');
@@ -26,7 +31,7 @@ export default function Home() {
       <div style={{ position: 'relative', width: '100%', height: '10px' }}>
         <Image alt="Camo" src={'/images/topbar.png'} fill={true} />
       </div>
-      <main className="container mx-auto flex flex-col max-w-6xl">
+      <main className="container mx-auto flex flex-col max-w-5xl">
         <div
           id="wrapper"
           ref={wrapperRef}
@@ -61,7 +66,7 @@ export default function Home() {
             Kyle Fraser
           </h1>
           <h2 className="font-outfit font-bold tracking-wide text-lg text-[#444444] dark:text-white">
-            Design, Develop, Deploy
+            Design • Develop • Deploy
           </h2>
           <hr className="border-[#90ce70] my-4" />
           <Heading3>Mission</Heading3>
@@ -199,16 +204,15 @@ export default function Home() {
                 </Text>
                 <Text style={{ color: '#ffffff' }}>
                   This project is built using Vite for the Typescript frontend
-                  and a Node Apollo GraphQL backend which connects to MongoDB
-                  Atlas. It has integrations with Mapbox, ID.me, Stripe and
-                  Atlas Search. It's deployed with Vercel for the frontend and
-                  uses DigitalOcean services for backend hosting, API endpoints,
-                  and CDN storage.
+                  and a Node Express Apollo GraphQL backend which connects to
+                  MongoDB Atlas. It has integrations with Mapbox, ID.me, Stripe
+                  and Atlas Search. It's deployed with Vercel for the frontend
+                  and uses DigitalOcean services for backend hosting, API
+                  endpoints, and CDN storage.
                 </Text>
                 <Text style={{ color: '#ffffff' }}>
                   This project also includes a marketing site that was built
-                  with NextJS and a blog that uses Hygraph, which has been great
-                  to work with.
+                  with NextJS and a blog that uses Hygraph for it's CMS.
                 </Text>
                 <Text style={{ color: '#ffffff', marginBottom: 48 }}>
                   Satisfy your wild.
@@ -286,7 +290,7 @@ export default function Home() {
               Breakwater Development Group
               <List.Text>
                 Modern development for the new wave of entrepreneur. Helping
-                brands brand surface to the top by using performant, low-cost
+                brands surface to the top by using performant, low-cost
                 solutions on the cutting edge to put them leagues above the
                 rest.
               </List.Text>
@@ -454,6 +458,110 @@ export default function Home() {
                     /> */}
               </div>
             </Process>
+            <List.Item>
+              Denxity
+              <List.Text>
+                A better marketing site experience for users, developers, and
+                content creators.
+              </List.Text>
+              <Button
+                onClick={() =>
+                  show !== 'denxity' ? setShow('denxity') : setShow('')
+                }
+                style={{ marginTop: '1rem' }}
+              >
+                {show !== 'denxity' ? 'View More' : 'View Less'}
+              </Button>
+            </List.Item>
+            <Process
+              offset={offset}
+              height={show === 'denxity' ? 'auto' : 0}
+              style={{
+                marginBottom: show === 'denxity' ? 32 : 0,
+                backgroundColor: '#13455e',
+                left: `calc(-${offset + 52}px)`,
+                position: 'relative',
+              }}
+              duration={250}
+            >
+              <div className="max-w-3xl">
+                <Image
+                  alt="Denxity"
+                  src={'images/denxity-logo.svg'}
+                  width="227"
+                  height="39"
+                  className="mb-3"
+                />
+                <Text style={{ color: '#ffffff' }}>
+                  This was a fun project incorporating different marketing
+                  techniques into a NextJS site. For a simple blogging platform,
+                  Sanity is used as the CMS.
+                </Text>
+              </div>
+              <div style={{ display: 'flex' }}>
+                {/* <Image
+                      key={i}
+                      style={{
+                        display: 'block',
+                        margin: 0,
+                        width: '100%',
+                      }}
+                    /> */}
+              </div>
+            </Process>
+            <List.Item>
+              Kilo Concepts
+              <List.Text>
+                Maximizing operator capabilities by utilizing advanced
+                techniques to create solutions that are stronger, lighter, and
+                more adaptable to meet the requirements of the harshest
+                environments.
+              </List.Text>
+              <Button
+                onClick={() =>
+                  show !== 'kilo' ? setShow('kilo') : setShow('')
+                }
+                style={{ marginTop: '1rem' }}
+              >
+                {show !== 'kilo' ? 'View More' : 'View Less'}
+              </Button>
+            </List.Item>
+            <Process
+              offset={offset}
+              height={show === 'kilo' ? 'auto' : 0}
+              style={{
+                marginBottom: show === 'kilo' ? 32 : 0,
+                backgroundColor: '#181C13',
+                left: `calc(-${offset + 52}px)`,
+                position: 'relative',
+              }}
+              duration={250}
+            >
+              <div className="max-w-3xl">
+                <Image
+                  alt="Kilo Concepts"
+                  src={'images/kilo-logo.svg'}
+                  width="125"
+                  height="41"
+                  className="mb-3"
+                />
+                <Text style={{ color: '#ffffff' }}>
+                  This was a fun project incorporating different marketing
+                  techniques into a NextJS site. For a simple blogging platform,
+                  Sanity is used as the CMS.
+                </Text>
+              </div>
+              <div style={{ display: 'flex' }}>
+                {/* <Image
+                      key={i}
+                      style={{
+                        display: 'block',
+                        margin: 0,
+                        width: '100%',
+                      }}
+                    /> */}
+              </div>
+            </Process>
           </List>
           <Heading3>Education</Heading3>
           <List>
@@ -490,6 +598,7 @@ export default function Home() {
             <List.Item>Toyota Tacoma offroad driver</List.Item>
             <List.Item>Rock 'n Roll guitar player</List.Item>
           </List>
+          <Gallery />
           <Heading3>Contact</Heading3>
           <Text>
             I can be reached by e-mail at

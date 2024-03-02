@@ -1,25 +1,38 @@
 import { useRef, useEffect, useState } from 'react';
 
-const AudioPlayer = () => {
-  const audioRef = useRef<HTMLAudioElement | null>(
-    typeof Audio !== 'undefined' ? new Audio('/audio/journey.mp3') : null
-  );
-  const [isPlaying, setIsPlaying] = useState(false);
+const useAudio = (url: string | undefined) => {
+  const [audio] = useState(typeof Audio !== 'undefined' && new Audio(url));
+  const [playing, setPlaying] = useState(false);
+
+  const toggle = () => setPlaying(!playing);
 
   useEffect(() => {
-    if (isPlaying) {
-      audioRef?.current?.play();
-    } else {
-      audioRef?.current?.pause();
+    if (audio) {
+      playing ? audio.play() : audio.pause();
     }
-  }, [isPlaying]);
+  }, [playing]);
+
+  useEffect(() => {
+    if (audio) {
+      audio.addEventListener('ended', () => setPlaying(false));
+      return () => {
+        audio.removeEventListener('ended', () => setPlaying(false));
+      };
+    }
+  }, []);
+
+  return [playing, toggle] as const;
+};
+
+const AudioPlayer = () => {
+  const [playing, toggle] = useAudio('/audio/journey.mp3');
 
   return (
     <>
-      {isPlaying ? (
+      {playing ? (
         <svg
           className="cursor-pointer"
-          onClick={() => setIsPlaying(false)}
+          onClick={() => toggle()}
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -37,7 +50,7 @@ const AudioPlayer = () => {
       ) : (
         <svg
           className="cursor-pointer"
-          onClick={() => setIsPlaying(true)}
+          onClick={() => toggle()}
           width="24"
           height="24"
           viewBox="0 0 24 24"
