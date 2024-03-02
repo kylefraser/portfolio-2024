@@ -11,8 +11,9 @@ const Gallery = () => {
     setModalOpen(true);
   }
   return (
-    <div className="grid grid-cols-3 md:grid-cols-4	gap-2 md:gap-4">
+    <div className="grid grid-cols-3 md:grid-cols-4	gap-2 md:gap-4 mb-5">
       <Image
+        className="cursor-pointer"
         onClick={() => handleClick('1')}
         src="/images/photos/1.webp"
         alt="1"
@@ -20,6 +21,7 @@ const Gallery = () => {
         height="1000"
       />
       <Image
+        className="cursor-pointer"
         onClick={() => handleClick('2')}
         src="/images/photos/2.webp"
         alt="2"
@@ -27,6 +29,7 @@ const Gallery = () => {
         height="1000"
       />
       <Image
+        className="cursor-pointer"
         onClick={() => handleClick('3')}
         src="/images/photos/3.webp"
         alt="3"
@@ -34,6 +37,7 @@ const Gallery = () => {
         height="1000"
       />
       <Image
+        className="cursor-pointer"
         onClick={() => handleClick('4')}
         src="/images/photos/4.webp"
         alt="4"
@@ -41,6 +45,7 @@ const Gallery = () => {
         height="1000"
       />
       <Image
+        className="cursor-pointer"
         onClick={() => handleClick('5')}
         src="/images/photos/5.webp"
         alt="5"
@@ -48,6 +53,7 @@ const Gallery = () => {
         height="1000"
       />
       <Image
+        className="cursor-pointer"
         onClick={() => handleClick('6')}
         src="/images/photos/6.webp"
         alt="6"
@@ -55,6 +61,7 @@ const Gallery = () => {
         height="1000"
       />
       <Image
+        className="cursor-pointer"
         onClick={() => handleClick('7')}
         src="/images/photos/7.webp"
         alt="7"
@@ -62,6 +69,7 @@ const Gallery = () => {
         height="1000"
       />
       <Image
+        className="cursor-pointer"
         onClick={() => handleClick('8')}
         src="/images/photos/8.webp"
         alt="8"
@@ -69,6 +77,7 @@ const Gallery = () => {
         height="1000"
       />
       <Image
+        className="cursor-pointer"
         onClick={() => handleClick('9')}
         src="/images/photos/9.webp"
         alt="9"
@@ -76,6 +85,7 @@ const Gallery = () => {
         height="1000"
       />
       <Image
+        className="cursor-pointer"
         onClick={() => handleClick('10')}
         src="/images/photos/10.webp"
         alt="10"
@@ -83,6 +93,7 @@ const Gallery = () => {
         height="1000"
       />
       <Image
+        className="cursor-pointer"
         onClick={() => handleClick('11')}
         src="/images/photos/11.webp"
         alt="11"
@@ -90,6 +101,7 @@ const Gallery = () => {
         height="1000"
       />
       <Image
+        className="cursor-pointer"
         onClick={() => handleClick('12')}
         src="/images/photos/12.webp"
         alt="12"
