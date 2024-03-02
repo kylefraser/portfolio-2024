@@ -1,113 +1,535 @@
-import Image from "next/image";
+'use client';
+
+import Image from 'next/image';
+import { Button, List, Process, ThemeToggle } from '@/components';
+import { useState, useRef, useEffect } from 'react';
 
 export default function Home() {
+  const [show, setShow] = useState('');
+  const [offset, setOffset] = useState();
+
+  let wrapperRef = useRef();
+
+  useEffect(() => {
+    setOffset(wrapperRef.current.offsetLeft);
+
+    function handleResize() {
+      setOffset(wrapperRef.current.offsetLeft);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [offset]);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div style={{ position: 'relative', width: '100%', height: '10px' }}>
+        <Image alt="Camo" src={'/images/topbar.png'} fill={true} />
+      </div>
+      <main className="container mx-auto flex flex-col max-w-6xl">
+        <div
+          id="wrapper"
+          ref={wrapperRef}
+          className="flex flex-col max-w-3xl py-24 px-5 md:px-10"
+        >
+          <div className="flex justify-between items-center w-full">
+            <svg
+              width="54"
+              height="54"
+              viewBox="0 0 495 495"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="247.5"
+                cy="247.5"
+                r="237.5"
+                strokeWidth="20"
+                className="stroke-[#444] dark:stroke-white"
+              />
+              <path
+                d="M237.24 126.36L131.4 259.92L237.24 396H188.64L86.4 259.92L188.64 126.36H237.24ZM381.693 162.72H275.493V241.92H337.413V277.92H275.493V360V396H236.253V126.36H381.693V162.72Z"
+                className="fill-[#444] dark:fill-white"
+              />
+            </svg>
+            <ThemeToggle />
+          </div>
+          <h1 className="font-outfit font-bold tracking-wide text-2xl mt-8">
+            Kyle Fraser
+          </h1>
+          <h2 className="font-outfit font-bold tracking-wide text-lg text-[#444444] dark:text-white">
+            Design, Develop, Deploy
+          </h2>
+          <hr className="border-[#90ce70] my-4" />
+          <Heading3>Mission</Heading3>
+          <Text>
+            To leverage and continually expand my skillset in an effective and
+            efficient manner as a member of a proficient team with strong
+            culture towards providing a well thought out and innovative product.
+          </Text>
+          <Heading3>About</Heading3>
+          <Text>
+            Raised in Maine, being surrounded by nature has given me a strong
+            respect for the beauty of the outdoors. I try to bring these
+            parallels into everyday life.
+          </Text>
+          <Text>
+            My first experience with computers was at 4 years old. I would help
+            my mother load 8" floppy disks with DOS onto the elementary school
+            computers, where she volunteered. The first PC I built was at 12
+            years old with my friends father's help, an IBM employee, who was
+            able to provide us with a LAN gaming paradise. It was a 900mhz
+            powerhouse, before the days of "gigahertz", affectionately named GOD
+            — the Guardian of Data. A self-taught coder, I quickly gained an
+            affection for creating and hacking during the days of 28.8kbps dial
+            up.{' '}
+            <span role="img" aria-label="Pirate Flag">
+              🏴‍☠️
+            </span>
+          </Text>
+          <Text>
+            An ardent believer in the balance of mind, body, and spirit, along
+            with a positive mental attitude, I do my best to emanate the common
+            good. Constantly evolving with each new introduction, I value the
+            insights gained from all people.
+          </Text>
+          <Text>Always Forward.</Text>
+          <Heading3>Experience</Heading3>
+          <List>
+            <List.Item>
+              <a
+                href="https://starburst.io"
+                target="_blank"
+                rel="noopener"
+                className="text-[#478527] shadow-[0_1px_0_0_#478527] hover:shadow-none"
+              >
+                Starburst Data
+              </a>{' '}
+              - Senior Web Developer
+              <List.Text>
+                Maintain and enhance web properties with development and design.
+                Implement personalization, progressive profiling, platform
+                migrations, search, and more. Substantial cross-team
+                collaboration with product, documentation, marketing, and
+                design. Strong self-sufficiency in a remote-first global working
+                environment.
+              </List.Text>
+            </List.Item>
+            <List.Item>
+              <a
+                href="https://robinpowered.com"
+                target="_blank"
+                rel="noopener"
+                className="text-[#478527] shadow-[0_1px_0_0_#478527] hover:shadow-none"
+              >
+                Robin Powered
+              </a>{' '}
+              - Frontend Designer
+              <List.Text>
+                Planning, development, and management of graphics and user
+                interface design projects. Provide support for products
+                developed for both internal use and for customers.
+              </List.Text>
+            </List.Item>
+            <List.Item>
+              <a
+                href="https://hellobonfire.com"
+                target="_blank"
+                rel="noopener"
+                className="text-[#478527] shadow-[0_1px_0_0_#478527] hover:shadow-none"
+              >
+                Bonfire Studios
+              </a>{' '}
+              - Frontend Web Developer
+              <List.Text>
+                Cut up and integrate designs into beautiful responsive code.
+                Proficiency implementing user interfaces (and UI elements), with
+                a keen eye on the larger experience. Collaborate seamlessly with
+                the Bonfire team towards rapid iteration and integration given
+                creative direction.
+              </List.Text>
+            </List.Item>
+          </List>
+          <Heading3>Projects</Heading3>
+          <List>
+            <List.Item>
+              Outland
+              <List.Text>
+                Users can find guided adventures, training, experiences, land
+                access, and equipment. Business owners, property owners, and
+                content creators can list their services while expanding their
+                reach.
+              </List.Text>
+              <Button
+                onClick={() =>
+                  show !== 'outland' ? setShow('outland') : setShow('')
+                }
+                style={{ marginTop: '1rem' }}
+              >
+                {show !== 'outland' ? 'View More' : 'View Less'}
+              </Button>
+            </List.Item>
+            <Process
+              offset={offset}
+              height={show == 'outland' ? 'auto' : 0}
+              style={{
+                marginBottom: show == 'outland' ? 32 : 0,
+                backgroundColor: '#788B51',
+                left: `calc(-${offset + 52}px)`,
+                position: 'relative',
+              }}
+              duration={250}
+            >
+              <div className="max-w-3xl">
+                <Image
+                  alt="Outland"
+                  src={'images/outland-logo.svg'}
+                  width="251"
+                  height="41"
+                  className="mb-3"
+                />
+                <Text style={{ color: '#fff' }}>
+                  Outland is an ambitious project to change the way people learn
+                  and offer more ways to get outdoors. Professionals and
+                  experienced mentors can pass their knowledge on to others,
+                  whether hands-on or through content creation.
+                </Text>
+                <Text style={{ color: '#ffffff' }}>
+                  This project is built using Vite for the Typescript frontend
+                  and a Node Apollo GraphQL backend which connects to MongoDB
+                  Atlas. It has integrations with Mapbox, ID.me, Stripe and
+                  Atlas Search. It's deployed with Vercel for the frontend and
+                  uses DigitalOcean services for backend hosting, API endpoints,
+                  and CDN storage.
+                </Text>
+                <Text style={{ color: '#ffffff' }}>
+                  This project also includes a marketing site that was built
+                  with NextJS and a blog that uses Hygraph, which has been great
+                  to work with.
+                </Text>
+                <Text style={{ color: '#ffffff', marginBottom: 48 }}>
+                  Satisfy your wild.
+                </Text>
+              </div>
+              <div style={{ display: 'flex' }}>
+                {/* <Image
+                      key={i}
+                      style={{
+                        display: 'block',
+                        margin: 0,
+                        width: '100%',
+                      }}
+                    /> */}
+              </div>
+            </Process>
+            <List.Item>
+              Coastal
+              <List.Text>
+                Forecast for those who live by the ocean. Coastal incorporates
+                tidal data, along with the common features you'd expect from a
+                weather app, in a clean, concise, and beautiful way.
+              </List.Text>
+              <Button
+                onClick={() =>
+                  show !== 'coastal' ? setShow('coastal') : setShow('')
+                }
+                style={{ marginTop: '1rem' }}
+              >
+                {show !== 'coastal' ? 'View More' : 'View Less'}
+              </Button>
+            </List.Item>
+            <Process
+              offset={offset}
+              height={show === 'coastal' ? 'auto' : 0}
+              style={{
+                marginBottom: show === 'coastal' ? 32 : 0,
+                backgroundColor: '#0C579C',
+                left: `calc(-${offset + 52}px)`,
+                position: 'relative',
+              }}
+              duration={250}
+            >
+              <div className="max-w-3xl">
+                <Image
+                  alt="Coastal"
+                  src={'images/coastal-logo.svg'}
+                  width="216"
+                  height="131"
+                  className="mb-3"
+                />
+                <Text style={{ color: '#ffffff' }}>
+                  The idea behind this project was to incorporate tidal data
+                  with the "regular" forecast. As someone who grew up on the
+                  coast of Maine, I wanted to create something that was easy to
+                  digest and had the pertinent information I was looking for at
+                  a glance.
+                </Text>
+                <Text style={{ color: '#ffffff', marginBottom: 48 }}>
+                  The logo features one of my favorite birds, the Cormorant.
+                </Text>
+              </div>
+              <div style={{ display: 'flex' }}>
+                {/* <Image
+                      key={i}
+                      style={{
+                        display: 'block',
+                        margin: 0,
+                        width: '100%',
+                      }}
+                    /> */}
+              </div>
+            </Process>
+            <List.Item>
+              Breakwater Development Group
+              <List.Text>
+                Modern development for the new wave of entrepreneur. Helping
+                brands brand surface to the top by using performant, low-cost
+                solutions on the cutting edge to put them leagues above the
+                rest.
+              </List.Text>
+              <Button
+                onClick={() =>
+                  show !== 'breakwater' ? setShow('breakwater') : setShow('')
+                }
+                style={{ marginTop: '1rem' }}
+              >
+                {show !== 'breakwater' ? 'View More' : 'View Less'}
+              </Button>
+            </List.Item>
+            <Process
+              offset={offset}
+              height={show === 'breakwater' ? 'auto' : 0}
+              style={{
+                marginBottom: show === 'breakwater' ? 32 : 0,
+                backgroundColor: '#101D2F',
+                left: `calc(-${offset + 52}px)`,
+                position: 'relative',
+              }}
+              duration={250}
+            >
+              <div className="max-w-3xl">
+                <Image
+                  alt="Breakwater"
+                  src={'images/breakwater-logo.svg'}
+                  width="187"
+                  height="48"
+                  className="mb-3"
+                />
+                <Text style={{ color: '#ffffff' }}>
+                  The idea behind this project was to incorporate tidal data
+                  with the "regular" forecast. As someone who grew up on the
+                  coast of Maine, I wanted to create something that was easy to
+                  digest and had the pertinent information I was looking for at
+                  a glance.
+                </Text>
+                <Text style={{ color: '#ffffff', marginBottom: 48 }}>
+                  The logo features one of my favorite birds, the Cormorant.
+                </Text>
+              </div>
+              <div style={{ display: 'flex' }}>
+                {/* <Image
+                      key={i}
+                      style={{
+                        display: 'block',
+                        margin: 0,
+                        width: '100%',
+                      }}
+                    /> */}
+              </div>
+            </Process>
+            <List.Item>
+              Crowdsurfer
+              <List.Text>Get in the pit and try to love some one.</List.Text>
+              <Button
+                onClick={() =>
+                  show !== 'crowdsurfer' ? setShow('crowdsurfer') : setShow('')
+                }
+                style={{ marginTop: '1rem' }}
+              >
+                {show !== 'crowdsurfer' ? 'View More' : 'View Less'}
+              </Button>
+            </List.Item>
+            <Process
+              offset={offset}
+              height={show === 'crowdsurfer' ? 'auto' : 0}
+              style={{
+                marginBottom: show === 'crowdsurfer' ? 32 : 0,
+                backgroundColor: '#0F0F0F',
+                left: `calc(-${offset + 52}px)`,
+                position: 'relative',
+              }}
+              duration={250}
+            >
+              <div className="max-w-3xl">
+                <Image
+                  alt="Crowdsurfer"
+                  src={'images/crowdsurfer-logo.svg'}
+                  width="320"
+                  height="52"
+                  className="mb-3"
+                />
+                <Text style={{ color: '#ffffff' }}>
+                  The idea behind this project was to incorporate tidal data
+                  with the "regular" forecast. As someone who grew up on the
+                  coast of Maine, I wanted to create something that was easy to
+                  digest and had the pertinent information I was looking for at
+                  a glance.
+                </Text>
+                <Text style={{ color: '#ffffff', marginBottom: 48 }}>
+                  The logo features one of my favorite birds, the Cormorant.
+                </Text>
+              </div>
+              <div style={{ display: 'flex' }}>
+                {/* <Image
+                      key={i}
+                      style={{
+                        display: 'block',
+                        margin: 0,
+                        width: '100%',
+                      }}
+                    /> */}
+              </div>
+            </Process>
+            <List.Item>
+              Ordnance
+              <List.Text>
+                A comprehensive ledger for the MIL/LEO professional. Keep track
+                of firearm data, items on hand, and build specifications. Record
+                and chart your progression through a number of different
+                training scenarios. Add your team and compete to see who has the
+                best times, accuracy, and precision.
+              </List.Text>
+              <Button
+                onClick={() =>
+                  show !== 'ordnance' ? setShow('ordnance') : setShow('')
+                }
+                style={{ marginTop: '1rem' }}
+              >
+                {show !== 'ordnance' ? 'View More' : 'View Less'}
+              </Button>
+            </List.Item>
+            <Process
+              offset={offset}
+              height={show === 'ordnance' ? 'auto' : 0}
+              style={{
+                marginBottom: show === 'ordnance' ? 32 : 0,
+                backgroundColor: '#3c442e',
+                left: `calc(-${offset + 52}px)`,
+                position: 'relative',
+              }}
+              duration={250}
+            >
+              <div className="max-w-3xl">
+                <Image
+                  alt="Ordnance"
+                  src={'images/ordnance-logo.svg'}
+                  width="316"
+                  height="58"
+                  className="mb-3"
+                />
+                <Text style={{ color: '#ffffff' }}>
+                  This project started after speaking with some of my closest
+                  friends, who are military & LEO veterans. Together, we believe
+                  we can make an impact in enhancing the standards of today's
+                  professionals. The premise of this application is to
+                  incorporate data keeping, training analytics, and perhaps most
+                  importantly — safety education.
+                </Text>
+                <Text style={{ color: '#ffffff', marginBottom: 48 }}>
+                  This project uses Expo and Typescript, built on a Express Node
+                  backend.
+                </Text>
+              </div>
+              <div style={{ display: 'flex' }}>
+                {/* <Image
+                      key={i}
+                      style={{
+                        display: 'block',
+                        margin: 0,
+                        width: '100%',
+                      }}
+                    /> */}
+              </div>
+            </Process>
+          </List>
+          <Heading3>Education</Heading3>
+          <List>
+            <List.Item>
+              Full Stack Open - University of Helsinki MOOC, Online 2020
+              <List.Text>
+                Full Stack Open is a deep dive into modern web development. The
+                course is offered by the University of Helsinki's Department of
+                Computer Science through their Massive Open Online Course (MOOC)
+                program. The main focus is on building single page applications
+                with ReactJS that use REST APIs built with Node.js.
+              </List.Text>
+            </List.Item>
+            <List.Item>
+              Web Design & Development - Startup Institute, Boston 2017
+              <List.Text>
+                UI/UX design, user research, rapid ideation, data visualization,
+                front-end development, responsive design, information
+                architecture, product management, wireframing and rapid
+                prototyping, typography.
+              </List.Text>
+            </List.Item>
+            <List.Item>
+              Bachelor of Science in Business Administration - Finance &
+              Management, University of Maine 2010
+            </List.Item>
+          </List>
+          <Heading3>Recreation</Heading3>
+          <List>
+            <List.Item>Outdoor everything enthusiast</List.Item>
+            <List.Item>Fish more, worry less</List.Item>
+            <List.Item>Salt water paddler</List.Item>
+            <List.Item>Mountains and plains hiker</List.Item>
+            <List.Item>Toyota Tacoma offroad driver</List.Item>
+            <List.Item>Rock 'n Roll guitar player</List.Item>
+          </List>
+          <Heading3>Contact</Heading3>
+          <Text>
+            I can be reached by e-mail at
+            <a
+              href="mailto:FraserKC@gmail.com"
+              className="text-[#478527] shadow-[0_1px_0_0_#478527] hover:shadow-none pl-[0.5ch]"
+            >
+              FraserKC@gmail.com
+            </a>
+          </Text>
+          <footer>
+            <Text>
+              Made in
+              <span
+                role="img"
+                aria-label="America"
+                style={{
+                  padding: '0 0.5ch',
+                }}
+              >
+                🇺🇸
+              </span>
+              — © {new Date().getFullYear()}, Kyle Fraser
+            </Text>
+          </footer>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
+
+const Heading3 = ({ children, ...props }: any) => {
+  return (
+    <h3 className="font-bold mt-6 mb-3 font-outfit" {...props}>
+      {children}
+    </h3>
+  );
+};
+
+const Text = ({ children, ...props }: any) => {
+  return (
+    <p className={'leading-6 mb-3 font-ptserif'} {...props}>
+      {children}
+    </p>
+  );
+};
