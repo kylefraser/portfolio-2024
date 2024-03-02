@@ -35,7 +35,7 @@ export default function Home() {
         <div
           id="wrapper"
           ref={wrapperRef}
-          className="flex flex-col max-w-3xl py-12 md:py-24 px-5 md:px-10"
+          className="flex flex-col max-w-4xl py-12 md:py-24 px-5 md:px-10"
         >
           <div className="flex justify-between items-center w-full">
             <svg
@@ -188,7 +188,7 @@ export default function Home() {
               }}
               duration={250}
             >
-              <div className="max-w-3xl md:pr-[92px]">
+              <div className="max-w-4xl md:pr-[92px]">
                 <Image
                   alt="Outland"
                   src={'images/outland-logo.svg'}
@@ -256,7 +256,7 @@ export default function Home() {
               }}
               duration={250}
             >
-              <div className="max-w-3xl pr-20">
+              <div className="max-w-4xl pr-20">
                 <Image
                   alt="Coastal"
                   src={'images/coastal-logo.svg'}
@@ -314,7 +314,7 @@ export default function Home() {
               }}
               duration={250}
             >
-              <div className="max-w-3xl pr-20">
+              <div className="max-w-4xl pr-20">
                 <Image
                   alt="Breakwater"
                   src={'images/breakwater-logo.svg'}
@@ -367,7 +367,7 @@ export default function Home() {
               }}
               duration={250}
             >
-              <div className="max-w-3xl pr-20">
+              <div className="max-w-4xl pr-20">
                 <Image
                   alt="Crowdsurfer"
                   src={'images/crowdsurfer-logo.svg'}
@@ -426,7 +426,7 @@ export default function Home() {
               }}
               duration={250}
             >
-              <div className="max-w-3xl pr-20">
+              <div className="max-w-4xl pr-20">
                 <Image
                   alt="Ordnance"
                   src={'images/ordnance-logo.svg'}
@@ -484,7 +484,7 @@ export default function Home() {
               }}
               duration={250}
             >
-              <div className="max-w-3xl pr-20">
+              <div className="max-w-4xl pr-20">
                 <Image
                   alt="Denxity"
                   src={'images/denxity-logo.svg'}
@@ -537,7 +537,7 @@ export default function Home() {
               }}
               duration={250}
             >
-              <div className="max-w-3xl pr-20">
+              <div className="max-w-4xl pr-20">
                 <Image
                   alt="Kilo Concepts"
                   src={'images/kilo-logo.svg'}
