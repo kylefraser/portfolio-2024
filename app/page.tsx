@@ -275,15 +275,25 @@ export default function Home() {
                   The logo features one of my favorite birds, the Cormorant.
                 </Text>
               </div>
-              <div style={{ display: 'flex' }}>
-                {/* <Image
-                      key={i}
-                      style={{
-                        display: 'block',
-                        margin: 0,
-                        width: '100%',
-                      }}
-                    /> */}
+              <div className="grid grid-cols-3">
+                <Image
+                  alt="Coastal"
+                  src="/images/coastal/coastal-iphone-1.webp"
+                  width="649"
+                  height="981"
+                />
+                <Image
+                  alt="Coastal"
+                  src="/images/coastal/coastal-iphone-2.webp"
+                  width="649"
+                  height="981"
+                />
+                <Image
+                  alt="Coastal"
+                  src="/images/coastal/coastal-iphone-3.webp"
+                  width="649"
+                  height="981"
+                />
               </div>
             </Process>
             <List.Item>
@@ -386,15 +396,25 @@ export default function Home() {
                   The logo features one of my favorite birds, the Cormorant.
                 </Text>
               </div>
-              <div style={{ display: 'flex' }}>
-                {/* <Image
-                      key={i}
-                      style={{
-                        display: 'block',
-                        margin: 0,
-                        width: '100%',
-                      }}
-                    /> */}
+              <div className="grid grid-cols-3">
+                <Image
+                  alt="Crowdsurfer"
+                  src="/images/crowdsurfer/crowdsurfer-iphone-1.webp"
+                  width="649"
+                  height="981"
+                />
+                <Image
+                  alt="Crowdsurfer"
+                  src="/images/crowdsurfer/crowdsurfer-iphone-2.webp"
+                  width="649"
+                  height="981"
+                />
+                <Image
+                  alt="Crowdsurfer"
+                  src="/images/crowdsurfer/crowdsurfer-iphone-3.webp"
+                  width="649"
+                  height="981"
+                />
               </div>
             </Process>
             <List.Item>
@@ -447,15 +467,25 @@ export default function Home() {
                   backend.
                 </Text>
               </div>
-              <div style={{ display: 'flex' }}>
-                {/* <Image
-                      key={i}
-                      style={{
-                        display: 'block',
-                        margin: 0,
-                        width: '100%',
-                      }}
-                    /> */}
+              <div className="grid grid-cols-3">
+                <Image
+                  alt="Ordnance"
+                  src="/images/ordnance/ordnance-iphone-1.webp"
+                  width="649"
+                  height="981"
+                />
+                <Image
+                  alt="Ordnance"
+                  src="/images/ordnance/ordnance-iphone-2.webp"
+                  width="649"
+                  height="981"
+                />
+                <Image
+                  alt="Ordnance"
+                  src="/images/ordnance/ordnance-iphone-3.webp"
+                  width="649"
+                  height="981"
+                />
               </div>
             </Process>
             <List.Item>
