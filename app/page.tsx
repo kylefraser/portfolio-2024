@@ -42,7 +42,7 @@ export default function Home() {
         <div
           id="wrapper"
           ref={wrapperRef}
-          className="flex flex-col max-w-4xl py-12 md:py-24 px-5 md:px-10"
+          className="flex flex-col max-w-4xl py-12 md:py-24 px-5 md:px-10 mx-auto"
         >
           <div className="flex justify-between items-center w-full relative my-5">
             <Logo />
