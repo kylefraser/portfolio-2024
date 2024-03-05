@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.0.7",
+    "@rive-app/react-canvas": "^4.8.3",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
     "react": "^18",

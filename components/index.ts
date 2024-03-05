@@ -2,6 +2,7 @@ import { AudioPlayer } from './AudioPlayer';
 import { Button } from './Button';
 import { Gallery } from './Gallery';
 import { List } from './List';
+import { Logo } from './Logo';
 import { Modal } from './Modal';
 import { Portal } from './Portal';
 import { Process } from './Process';
@@ -12,6 +13,7 @@ export {
   Button,
   Gallery,
   List,
+  Logo,
   Modal,
   Portal,
   Process,

@@ -1,7 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import { AudioPlayer, Button, List, Process, ThemeToggle } from '@/components';
+import {
+  AudioPlayer,
+  Button,
+  List,
+  Logo,
+  Process,
+  ThemeToggle,
+} from '@/components';
 import { useState, useRef, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -37,27 +44,9 @@ export default function Home() {
           ref={wrapperRef}
           className="flex flex-col max-w-4xl py-12 md:py-24 px-5 md:px-10"
         >
-          <div className="flex justify-between items-center w-full">
-            <svg
-              width="54"
-              height="54"
-              viewBox="0 0 495 495"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="247.5"
-                cy="247.5"
-                r="237.5"
-                strokeWidth="20"
-                className="stroke-[#444] dark:stroke-white"
-              />
-              <path
-                d="M237.24 126.36L131.4 259.92L237.24 396H188.64L86.4 259.92L188.64 126.36H237.24ZM381.693 162.72H275.493V241.92H337.413V277.92H275.493V360V396H236.253V126.36H381.693V162.72Z"
-                className="fill-[#444] dark:fill-white"
-              />
-            </svg>
-            <div className="flex gap-[1rem] items-center">
+          <div className="flex justify-between items-center w-full relative my-5">
+            <Logo />
+            <div className="flex gap-[1rem] items-center absolute right-0">
               <AudioPlayer />
               <ThemeToggle />
             </div>
@@ -539,7 +528,7 @@ export default function Home() {
                     /> */}
               </div>
             </Process>
-            <List.Item>
+            {/* <List.Item>
               Kilo Concepts
               <List.Text>
                 Maximizing operator capabilities by utilizing advanced
@@ -582,16 +571,8 @@ export default function Home() {
                 </Text>
               </div>
               <div style={{ display: 'flex' }}>
-                {/* <Image
-                      key={i}
-                      style={{
-                        display: 'block',
-                        margin: 0,
-                        width: '100%',
-                      }}
-                    /> */}
               </div>
-            </Process>
+            </Process> */}
           </List>
           <Heading3>Education</Heading3>
           <List>
