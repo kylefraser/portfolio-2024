@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 const Logo = () => {
   const { theme, resolvedTheme } = useTheme();
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const { rive: lightRive, RiveComponent: LightRiveComponent } = useRive({
     src: '/animations/kf_logo.riv',
@@ -43,10 +43,10 @@ const Logo = () => {
   }, [resolvedTheme]);
 
   useEffect(() => {
-    setIsLoaded(true);
+    setMounted(true);
   }, []);
 
-  if (!isLoaded) {
+  if (!mounted) {
     return null;
   }
 

@@ -19,6 +19,7 @@ const Gallery = dynamic(() => import('../components/Gallery/Gallery'), {
 export default function Home() {
   const [show, setShow] = useState('');
   const [offset, setOffset] = useState('');
+  const [mounted, setMounted] = useState(false);
 
   let wrapperRef = useRef<any>(null);
 
@@ -32,6 +33,15 @@ export default function Home() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [offset]);
+
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <>
