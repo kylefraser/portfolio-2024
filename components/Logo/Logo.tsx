@@ -2,9 +2,12 @@ import { useRive } from '@rive-app/react-canvas';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-const Logo = () => {
+interface LogoProps {
+  mounted: boolean;
+}
+
+const Logo = (mounted: LogoProps) => {
   const { theme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
 
   const { rive: lightRive, RiveComponent: LightRiveComponent } = useRive({
     src: '/animations/kf_logo.riv',
@@ -41,10 +44,6 @@ const Logo = () => {
       darkRive?.play();
     }
   }, [resolvedTheme]);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   if (!mounted) {
     return null;

@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <>
       <div style={{ position: 'relative', width: '100%', height: '10px' }}>
-        <Image alt="Camo" src={'/images/topbar.png'} fill={true} />
+        <Image alt="Camo" src={'/images/topbar.png'} fill={true} priority />
       </div>
       <main className="container mx-auto flex flex-col max-w-5xl">
         <div
@@ -55,7 +55,7 @@ export default function Home() {
           className="flex flex-col w-full max-w-4xl py-12 md:py-24 px-5 md:px-10 mx-auto"
         >
           <div className="flex justify-between items-center w-full relative my-5">
-            <Logo />
+            <Logo mounted={mounted} />
             <div className="flex gap-[1rem] items-center absolute right-0">
               <AudioPlayer />
               <ThemeToggle />
