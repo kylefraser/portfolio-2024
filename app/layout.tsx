@@ -32,7 +32,7 @@ export default function RootLayout({
       className={`${ptserif.variable} ${outfit.variable}`}
       style={{ scrollbarGutter: 'stable' }}
     >
-      <body className={'bg-white dark:bg-[#0e100a] overflow-x-hidden'}>
+      <body className={'bg-white dark:bg-[#0f120b] overflow-x-hidden'}>
         <div id="root">
           <Providers>{children}</Providers>
         </div>
