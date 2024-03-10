@@ -38,7 +38,6 @@ export default function Home() {
   }, [offset]);
 
   const name = 'Kyle Fraser';
-  const tagline = 'Design • Develop • Deploy';
 
   const sentence = {
     hidden: {
@@ -47,7 +46,7 @@ export default function Home() {
     visible: {
       transition: {
         opacity: 1,
-        delay: 0.18,
+        delay: 0.25,
         staggerChildren: 0.05,
       },
     },
@@ -95,7 +94,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              transition={{ duration: 1, delay: 0 }}
               className="flex gap-[1rem] items-center absolute right-0"
             >
               <AudioPlayer />
@@ -116,30 +115,53 @@ export default function Home() {
               );
             })}
           </motion.div>
-          <motion.div
-            className="font-outfit font-bold tracking-wide text-lg text-[#444444] dark:text-white"
-            initial="hidden"
-            animate="visible"
-            variants={sentence}
-          >
-            {tagline.split('').map((char, index) => {
-              return (
-                <motion.span key={char + '-' + index} variants={letter}>
-                  {char}
-                </motion.span>
-              );
-            })}
-          </motion.div>
+          <h2 className="font-outfit font-bold tracking-wide text-lg text-[#444444] dark:text-white">
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.25, delay: 1 }}
+            >
+              Design
+            </motion.span>{' '}
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1.5 }}
+            >
+              •
+            </motion.span>{' '}
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.25, delay: 1.25 }}
+            >
+              Develop
+            </motion.span>{' '}
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1.5 }}
+            >
+              •
+            </motion.span>{' '}
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.25, delay: 1.5 }}
+            >
+              Deploy
+            </motion.span>
+          </h2>
           <motion.hr
             initial={{ width: 0 }}
             animate={{ width: '100%' }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1, delay: 0.75 }}
             className="border-[#90ce70] my-4 mx-auto"
           />
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1.5 }}
+            transition={{ duration: 1, delay: 1.25 }}
           >
             <Heading3>Mission</Heading3>
             <Text>
