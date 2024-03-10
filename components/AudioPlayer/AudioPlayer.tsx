@@ -30,7 +30,7 @@ const AudioPlayer = () => {
   const [playing, toggle] = useAudio('/audio/journey.mp3');
 
   return (
-    <Tooltip.Provider>
+    <Tooltip.Provider delayDuration={350}>
       <Tooltip.Root>
         <Tooltip.Trigger asChild>
           {playing ? (
@@ -81,6 +81,7 @@ const AudioPlayer = () => {
               width="32"
               height="32"
               alt="Tenno"
+              priority
             />{' '}
             Tenno - Journey
             <Tooltip.Arrow className="fill-white" />

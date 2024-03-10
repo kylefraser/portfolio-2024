@@ -27,7 +27,7 @@ const ThemeToggle = () => {
   }
 
   return (
-    <Tooltip.Provider>
+    <Tooltip.Provider delayDuration={350}>
       <Tooltip.Root>
         <Tooltip.Trigger asChild>
           {theme == 'dark' ? (
