@@ -1,10 +1,14 @@
-import { useRive } from '@rive-app/react-canvas';
+import { useRive, RuntimeLoader } from '@rive-app/react-canvas-lite';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+//@ts-ignore
+import riveWASMResource from '@rive-app/canvas-lite/rive.wasm';
 
 interface LogoProps {
   mounted: boolean;
 }
+
+RuntimeLoader.setWasmUrl(riveWASMResource);
 
 const Logo = (mounted: LogoProps) => {
   const { theme, resolvedTheme } = useTheme();

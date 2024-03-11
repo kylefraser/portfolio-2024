@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.0.7",
-    "@rive-app/react-canvas": "^4.8.3",
+    "@rive-app/canvas-lite": "^2.10.3",
+    "@rive-app/react-canvas-lite": "^4.8.3",
     "framer-motion": "^11.0.8",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
@@ -27,6 +28,7 @@
     "eslint-config-next": "14.1.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "url-loader": "^4.1.1"
   }
 }

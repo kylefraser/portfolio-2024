@@ -327,9 +327,9 @@ export default function Home() {
                     height="1200"
                   />
                 </div>
-                <video muted controls>
+                {/* <video muted controls>
                   <source src="videos/outland.mp4" />
-                </video>
+                </video> */}
               </Process>
               <List.Item>
                 Coastal
@@ -445,9 +445,9 @@ export default function Home() {
                     The logo features one of my favorite birds, the Cormorant.
                   </Text>
                 </div>
-                <video muted controls>
+                {/* <video muted controls>
                   <source src="videos/breakwater.mp4" />
-                </video>
+                </video> */}
               </Process>
               <List.Item>
                 Crowdsurfer
