@@ -10,7 +10,7 @@ const Process = ({ children, height, offset, show, ...props }: any) => {
       {...props}
     >
       <div
-        className={`flex flex-col w-[calc(100vw-52px-1.25rem)] md:w-full max-w-5xl relative py-10`}
+        className={`flex flex-col w-[calc(100vw-52px-1.25rem)] md:w-full max-w-4xl relative py-10 pr-20`}
         style={{ left: offset + 52 + 'px' }}
       >
         {children}

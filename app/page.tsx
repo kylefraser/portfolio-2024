@@ -283,7 +283,7 @@ export default function Home() {
                 }}
                 duration={250}
               >
-                <div className="max-w-4xl md:pr-[92px]">
+                <div className="max-w-4xl">
                   <Image
                     alt="Outland"
                     src={'images/outland-logo.svg'}
@@ -313,16 +313,23 @@ export default function Home() {
                     Satisfy your wild.
                   </Text>
                 </div>
-                <div style={{ display: 'flex' }}>
-                  {/* <Image
-                      key={i}
-                      style={{
-                        display: 'block',
-                        margin: 0,
-                        width: '100%',
-                      }}
-                    /> */}
+                <div className="grid grid-cols-2">
+                  <Image
+                    alt="Outland"
+                    src="/images/outland/outland-1.webp"
+                    width="1600"
+                    height="1200"
+                  />
+                  <Image
+                    alt="Outland"
+                    src="/images/outland/outland-2.webp"
+                    width="1600"
+                    height="1200"
+                  />
                 </div>
+                <video muted controls>
+                  <source src="videos/outland.mp4" />
+                </video>
               </Process>
               <List.Item>
                 Coastal
@@ -351,7 +358,7 @@ export default function Home() {
                 }}
                 duration={250}
               >
-                <div className="max-w-4xl pr-20">
+                <div className="max-w-4xl">
                   <Image
                     alt="Coastal"
                     src={'images/coastal-logo.svg'}
@@ -419,7 +426,7 @@ export default function Home() {
                 }}
                 duration={250}
               >
-                <div className="max-w-4xl pr-20">
+                <div className="max-w-4xl">
                   <Image
                     alt="Breakwater"
                     src={'images/breakwater-logo.svg'}
@@ -438,16 +445,9 @@ export default function Home() {
                     The logo features one of my favorite birds, the Cormorant.
                   </Text>
                 </div>
-                <div style={{ display: 'flex' }}>
-                  {/* <Image
-                      key={i}
-                      style={{
-                        display: 'block',
-                        margin: 0,
-                        width: '100%',
-                      }}
-                    /> */}
-                </div>
+                <video muted controls>
+                  <source src="videos/breakwater.mp4" />
+                </video>
               </Process>
               <List.Item>
                 Crowdsurfer
@@ -474,7 +474,7 @@ export default function Home() {
                 }}
                 duration={250}
               >
-                <div className="max-w-4xl pr-20">
+                <div className="max-w-4xl">
                   <Image
                     alt="Crowdsurfer"
                     src={'images/crowdsurfer-logo.svg'}
@@ -544,7 +544,7 @@ export default function Home() {
                 }}
                 duration={250}
               >
-                <div className="max-w-4xl pr-20">
+                <div className="max-w-4xl">
                   <Image
                     alt="Ordnance"
                     src={'images/ordnance-logo.svg'}
@@ -612,7 +612,7 @@ export default function Home() {
                 }}
                 duration={250}
               >
-                <div className="max-w-4xl pr-20">
+                <div className="max-w-4xl">
                   <Image
                     alt="Denxity"
                     src={'images/denxity-logo.svg'}
@@ -626,62 +626,78 @@ export default function Home() {
                     platform, Sanity is used as the CMS.
                   </Text>
                 </div>
-                <div style={{ display: 'flex' }}>
-                  {/* <Image
-                      key={i}
-                      style={{
-                        display: 'block',
-                        margin: 0,
-                        width: '100%',
-                      }}
-                    /> */}
+                <div className="grid grid-cols-2">
+                  <Image
+                    alt="Denxity"
+                    src="/images/denxity/denxity-dark.webp"
+                    width="1600"
+                    height="1200"
+                  />
+                  <Image
+                    alt="Denxity"
+                    src="/images/denxity/denxity-light.webp"
+                    width="1600"
+                    height="1200"
+                  />
                 </div>
               </Process>
-              {/* <List.Item>
-              Kilo Concepts
-              <List.Text>
-                Maximizing operator capabilities by utilizing advanced
-                techniques to create solutions that are stronger, lighter, and
-                more adaptable to meet the requirements of the harshest
-                environments.
-              </List.Text>
-              <Button
-                onClick={() =>
-                  show !== 'kilo' ? setShow('kilo') : setShow('')
-                }
-                style={{ marginTop: '1rem' }}
+              <List.Item>
+                Kilo Concepts
+                <List.Text>
+                  Maximizing operator capabilities by utilizing advanced
+                  techniques to create solutions that are stronger, lighter, and
+                  more adaptable to meet the requirements of the harshest
+                  environments.
+                </List.Text>
+                <Button
+                  onClick={() =>
+                    show !== 'kilo' ? setShow('kilo') : setShow('')
+                  }
+                  style={{ marginTop: '1rem' }}
+                >
+                  {show !== 'kilo' ? 'View More' : 'View Less'}
+                </Button>
+              </List.Item>
+              <Process
+                offset={offset}
+                height={show === 'kilo' ? 'auto' : 0}
+                style={{
+                  marginBottom: show === 'kilo' ? 32 : 0,
+                  backgroundColor: '#181C13',
+                  left: `calc(-${offset + 52}px)`,
+                  position: 'relative',
+                }}
+                duration={250}
               >
-                {show !== 'kilo' ? 'View More' : 'View Less'}
-              </Button>
-            </List.Item>
-            <Process
-              offset={offset}
-              height={show === 'kilo' ? 'auto' : 0}
-              style={{
-                marginBottom: show === 'kilo' ? 32 : 0,
-                backgroundColor: '#181C13',
-                left: `calc(-${offset + 52}px)`,
-                position: 'relative',
-              }}
-              duration={250}
-            >
-              <div className="max-w-4xl pr-20">
-                <Image
-                  alt="Kilo Concepts"
-                  src={'images/kilo-logo.svg'}
-                  width="125"
-                  height="41"
-                  className="mb-3"
-                />
-                <Text style={{ color: '#ffffff' }}>
-                  This was a fun project incorporating different marketing
-                  techniques into a NextJS site. For a simple blogging platform,
-                  Sanity is used as the CMS.
-                </Text>
-              </div>
-              <div style={{ display: 'flex' }}>
-              </div>
-            </Process> */}
+                <div className="max-w-4xl">
+                  <Image
+                    alt="Kilo Concepts"
+                    src={'images/kilo-logo.svg'}
+                    width="125"
+                    height="41"
+                    className="mb-3"
+                  />
+                  <Text style={{ color: '#ffffff' }}>
+                    This was a fun project incorporating different marketing
+                    techniques into a NextJS site. For a simple blogging
+                    platform, Sanity is used as the CMS.
+                  </Text>
+                </div>
+                <div className="grid grid-cols-2">
+                  <Image
+                    alt="Kilo"
+                    src="/images/kilo/kilo-concepts-1.webp"
+                    width="1600"
+                    height="1200"
+                  />
+                  <Image
+                    alt="Kilo"
+                    src="/images/kilo/kilo-concepts-2.webp"
+                    width="1600"
+                    height="1200"
+                  />
+                </div>
+              </Process>
             </List>
             <Heading3>Education</Heading3>
             <List>
