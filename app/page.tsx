@@ -292,25 +292,23 @@ export default function Home() {
                     className="mb-3"
                   />
                   <Text style={{ color: '#fff' }}>
-                    Outland is an ambitious project to change the way people
-                    learn and offer more ways to get outdoors. Professionals and
-                    experienced mentors can pass their knowledge on to others,
-                    whether hands-on or through content creation.
-                  </Text>
-                  <Text style={{ color: '#ffffff' }}>
-                    This project is built using Vite for the Typescript frontend
-                    and a Node Express Apollo GraphQL backend which connects to
-                    MongoDB Atlas. It has integrations with Mapbox, ID.me,
-                    Stripe and Atlas Search. It's deployed with Vercel for the
-                    frontend and uses DigitalOcean services for backend hosting,
-                    API endpoints, and CDN storage.
-                  </Text>
-                  <Text style={{ color: '#ffffff' }}>
-                    This project also includes a marketing site that was built
-                    with NextJS and a blog that uses Hygraph for it's CMS.
+                    Outland is an ambitious project first conceived in late 2020
+                    after realizing the need for a more efficient platform for
+                    business owners and individuals to expand their networks.
+                    Professionals and experienced mentors can pass on their
+                    knowledge to others, whether hands-on or through content
+                    creation. The idea is to change the way people learn by
+                    offering new opportunities to get outdoors and build real
+                    skills.
                   </Text>
                   <Text style={{ color: '#ffffff', marginBottom: 48 }}>
-                    Satisfy your wild.
+                    Outland is founded upon three guiding principles -
+                    Accomplishment, Confidence, and Exposure - simply known as
+                    ACE. Accomplishment through challenge and progression,
+                    Confidence through a greater understanding and knowledge,
+                    and Exposure through the opportunity to participate. Outland
+                    is designed to instill these through its approach to
+                    courses, guides, and access.
                   </Text>
                 </div>
                 <div className="grid grid-cols-2">
@@ -326,6 +324,39 @@ export default function Home() {
                     width="1600"
                     height="1200"
                   />
+                </div>
+                <div className="max-w-4xl mt-[3rem]">
+                  <Text style={{ color: '#fff' }}>
+                    This project is built using Vite for the React Typescript
+                    frontend and a Node Express backend utilizing Apollo GraphQL
+                    endpoints that connect to a MongoDB database. Apollo
+                    provides a cache layer and middleware while hooks and
+                    context are used for state management, along with
+                    localStorage and Broadcast events to keep tabs in sync. JWT
+                    and form validation is utilized for better security
+                    measures. Integrations include Mapbox for custom maps and
+                    geocoding, ID.me for verified authentication, Stripe Connect
+                    for payments and transactions, and Mongo’s Atlas Search
+                    aggregation for fast indexed search. DigitalOcean Droplets
+                    and Spaces are used for server and CDN storage, along with
+                    Domains for various DNS routing. Transactional, engagement,
+                    and marketing emails are handled with Resend. Finally, the
+                    frontend is deployed using Vercel with Github Actions to
+                    orchestrate deployment.
+                  </Text>
+                  <Text style={{ color: '#fff' }}>
+                    Other tools used for this project include NextJS for a
+                    marketing website, Nextra for a docs-based help center, and
+                    Hygraph for a blogging platform. All projects are themed for
+                    both dark and light modes.
+                  </Text>
+                  <Text style={{ color: '#ffffff' }}>
+                    This has been a strong passion project of mine that I’ve
+                    been chipping away over time. All design, development,
+                    deployment, and business related tasks are done solely by
+                    myself.
+                  </Text>
+                  <Text style={{ color: '#ffffff' }}>Satisfy your wild.</Text>
                 </div>
                 {/* <video muted controls>
                   <source src="videos/outland.mp4" />
@@ -435,15 +466,29 @@ export default function Home() {
                     className="mb-3"
                   />
                   <Text style={{ color: '#ffffff' }}>
-                    The idea behind this project was to incorporate tidal data
-                    with the "regular" forecast. As someone who grew up on the
-                    coast of Maine, I wanted to create something that was easy
-                    to digest and had the pertinent information I was looking
-                    for at a glance.
+                    Breakwater Development Group was set up to provide clients
+                    with expertise in all things web. From design to development
+                    to better SEO, Breakwater is able to utilize years of
+                    experience to formulate better strategy for modern websites.
                   </Text>
                   <Text style={{ color: '#ffffff', marginBottom: 48 }}>
-                    The logo features one of my favorite birds, the Cormorant.
+                    Breakwater is a term for 'a barrier that protects a harbor
+                    or shore from the full impact of waves'.
                   </Text>
+                </div>
+                <div className="grid grid-cols-2">
+                  <Image
+                    alt="Breakwater"
+                    src="/images/breakwater/breakwater-1.webp"
+                    width="1600"
+                    height="1200"
+                  />
+                  <Image
+                    alt="Breakwater"
+                    src="/images/breakwater/breakwater-2.webp"
+                    width="1600"
+                    height="1200"
+                  />
                 </div>
                 {/* <video muted controls>
                   <source src="videos/breakwater.mp4" />
@@ -451,7 +496,11 @@ export default function Home() {
               </Process>
               <List.Item>
                 Crowdsurfer
-                <List.Text>Get in the pit and try to love some one.</List.Text>
+                <List.Text>
+                  Connect with more people who share a passion for music. Find
+                  new concerts and shows to attend, send music to new fans, and
+                  find locals in your area who play instruments.
+                </List.Text>
                 <Button
                   onClick={() =>
                     show !== 'crowdsurfer'
@@ -483,14 +532,20 @@ export default function Home() {
                     className="mb-3"
                   />
                   <Text style={{ color: '#ffffff' }}>
-                    The idea behind this project was to incorporate tidal data
-                    with the "regular" forecast. As someone who grew up on the
-                    coast of Maine, I wanted to create something that was easy
-                    to digest and had the pertinent information I was looking
-                    for at a glance.
+                    Crowdsurfer is a concept to connect music lovers with
+                    eachother. It takes inspiration from dating apps, of all
+                    places, to meet people with the intention of sharing songs,
+                    going to concerts together, or finding someone new to play
+                    music together.
+                  </Text>
+                  <Text style={{ color: '#ffffff' }}>
+                    A secondary objective for this app is to find new concerts
+                    in your area. It allows a user to search for new shows and
+                    provides a curated list of recommendations.
                   </Text>
                   <Text style={{ color: '#ffffff', marginBottom: 48 }}>
-                    The logo features one of my favorite birds, the Cormorant.
+                    This project utilizes different API's for music sharing and
+                    is built with Expo.
                   </Text>
                 </div>
                 <div className="grid grid-cols-3">
@@ -561,8 +616,8 @@ export default function Home() {
                     most importantly — safety education.
                   </Text>
                   <Text style={{ color: '#ffffff', marginBottom: 48 }}>
-                    This project uses Expo and Typescript, built on a Express
-                    Node backend.
+                    This project uses Expo and Typescript, built on a Node
+                    Express backend.
                   </Text>
                 </div>
                 <div className="grid grid-cols-3">
@@ -625,6 +680,12 @@ export default function Home() {
                     techniques into a NextJS site. For a simple blogging
                     platform, Sanity is used as the CMS.
                   </Text>
+                  <Text style={{ color: '#ffffff', marginBottom: 48 }}>
+                    Authentication is implemented for secure and safe user
+                    creation into a project. Middleware handles cookie logic for
+                    better GDPR. Localization is used for internationalization
+                    and translation into various languages.
+                  </Text>
                 </div>
                 <div className="grid grid-cols-2">
                   <Image
@@ -678,9 +739,22 @@ export default function Home() {
                     className="mb-3"
                   />
                   <Text style={{ color: '#ffffff' }}>
-                    This was a fun project incorporating different marketing
-                    techniques into a NextJS site. For a simple blogging
-                    platform, Sanity is used as the CMS.
+                    Kilo Concepts is a home for one of my newest hobbies, CAD
+                    design. I use a Bambu Lab X1 printer for high quality
+                    prototypes and Fusion 360 to design complex parts, both in
+                    2D and 3D.
+                  </Text>
+                  <Text style={{ color: '#ffffff' }}>
+                    The underlying concept that guides my design is to innovate
+                    using additive manufacturing processes to create better end
+                    user experiences. This is achieved by continuously testing
+                    and evaluating prototypes, refining designs, and
+                    incorporating the latest standards.
+                  </Text>
+                  <Text style={{ color: '#ffffff', marginBottom: 48 }}>
+                    If a new product does not offer lighter weight, higher
+                    reliability, and better durability, does it really warrant
+                    replacing the current system.
                   </Text>
                 </div>
                 <div className="grid grid-cols-2">
