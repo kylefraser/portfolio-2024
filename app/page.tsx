@@ -329,14 +329,13 @@ export default function Home() {
                   <Text style={{ color: '#fff' }}>
                     This project is built using Vite for the React Typescript
                     frontend and a Node Express backend utilizing Apollo GraphQL
-                    endpoints that connect to a MongoDB database. Apollo
-                    provides a cache layer and middleware while hooks and
+                    endpoints that connect to a MongoDB database. Hooks and
                     context are used for state management, along with
                     localStorage and Broadcast events to keep tabs in sync. JWT
                     and form validation is utilized for better security
                     measures. Integrations include Mapbox for custom maps and
                     geocoding, ID.me for verified authentication, Stripe Connect
-                    for payments and transactions, and Mongo’s Atlas Search
+                    for payments and transactions, and Mongo's Atlas Search
                     aggregation for fast indexed search. DigitalOcean Droplets
                     and Spaces are used for server and CDN storage, along with
                     Domains for various DNS routing. Transactional, engagement,
@@ -351,7 +350,7 @@ export default function Home() {
                     both dark and light modes.
                   </Text>
                   <Text style={{ color: '#ffffff' }}>
-                    This has been a strong passion project of mine that I’ve
+                    This has been a strong passion project of mine that I've
                     been chipping away over time. All design, development,
                     deployment, and business related tasks are done solely by
                     myself.
