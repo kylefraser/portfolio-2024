@@ -5,6 +5,8 @@ import { Outfit, PT_Serif } from 'next/font/google';
 //@ts-ignore
 import riveWASMResource from '@rive-app/canvas-lite/rive.wasm';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const ptserif = PT_Serif({
   weight: ['400', '700'],
@@ -40,6 +42,8 @@ export default function RootLayout({
         <div id="root">
           <Providers>{children}</Providers>
         </div>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
