@@ -721,6 +721,7 @@ export default function Home() {
                 offset={offset}
                 height={show === 'kilo' ? 'auto' : 0}
                 style={{
+                  marginTop: show === 'kilo' ? 32 : 0,
                   marginBottom: show === 'kilo' ? 32 : 0,
                   backgroundColor: '#181C13',
                   left: `calc(-${offset + 52}px)`,
@@ -843,7 +844,7 @@ export default function Home() {
 
 const Heading3 = ({ children, ...props }: any) => {
   return (
-    <h3 className="font-bold mt-6 mb-3 font-outfit" {...props}>
+    <h3 className="font-bold mt-8 mb-3 font-outfit" {...props}>
       {children}
     </h3>
   );

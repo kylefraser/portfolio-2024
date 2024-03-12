@@ -1,10 +1,10 @@
 const List = ({ children }: any) => {
-  return <ul className="list-none pl-[12px] mb-[-1rem]">{children}</ul>;
+  return <ul className="list-none pl-[12px]">{children}</ul>;
 };
 
 const Item = ({ children }: any) => {
   return (
-    <li className="leading-6 mb-8 before:content-['•'] before:text-[#90ce70] before:ml-[-12px] before:mr-[0.5ch] font-ptserif">
+    <li className="leading-6 last-of-type:mb-0 mb-8 before:content-['•'] before:text-[#90ce70] before:ml-[-12px] before:mr-[0.5ch] font-ptserif">
       {children}
     </li>
   );
