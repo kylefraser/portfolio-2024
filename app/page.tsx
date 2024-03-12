@@ -165,7 +165,7 @@ export default function Home() {
           >
             <Heading3>Mission</Heading3>
             <Text>
-              To leverage and continually expand my skillset in an effective and
+              To leverage and continually expand my skill set in an effective and
               efficient manner as a member of a proficient team with strong
               culture towards providing a well thought out and innovative
               product.
