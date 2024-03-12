@@ -37,7 +37,11 @@ export default function RootLayout({
       className={`${ptserif.variable} ${outfit.variable}`}
       style={{ scrollbarGutter: 'stable' }}
     >
-      <body className={'bg-white dark:bg-[#0f120b] overflow-x-hidden'}>
+      <body
+        className={
+          'bg-white dark:bg-[#0f120b] text-[#000000] dark:text-[#ffffff] overflow-x-hidden'
+        }
+      >
         <Script src={riveWASMResource} strategy="beforeInteractive" />
         <div id="root">
           <Providers>{children}</Providers>
