@@ -534,7 +534,7 @@ export default function Home() {
                     eachother. It takes inspiration from dating apps, of all
                     places, to meet people with the intention of sharing songs,
                     going to concerts together, or finding someone new to play
-                    music together.
+                    music with.
                   </Text>
                   <Text style={{ color: '#ffffff' }}>
                     A secondary objective for this app is to find new concerts
