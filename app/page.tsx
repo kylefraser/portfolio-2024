@@ -338,10 +338,10 @@ export default function Home() {
                     for payments and transactions, and Mongo's Atlas Search
                     aggregation for fast indexed search. DigitalOcean Droplets
                     and Spaces are used for server and CDN storage, along with
-                    Domains for various DNS routing. Transactional, engagement,
-                    and marketing emails are handled with Resend. Finally, the
-                    frontend is deployed using Vercel with Github Actions to
-                    orchestrate deployment.
+                    Domains for various DNS routing. Resend is used for
+                    beautiful transactional, engagement, and marketing emails.
+                    Finally, the frontend is deployed using Vercel with Github
+                    Actions to orchestrate deployment.
                   </Text>
                   <Text style={{ color: '#fff' }}>
                     Other tools used for this project include NextJS for a
@@ -350,10 +350,9 @@ export default function Home() {
                     both dark and light modes.
                   </Text>
                   <Text style={{ color: '#ffffff' }}>
-                    This has been a strong passion project of mine that I've
-                    been chipping away over time. All design, development,
-                    deployment, and business related tasks are done solely by
-                    myself.
+                    This has been a passion project of mine that I've been
+                    chipping away at over time. All design, development,
+                    deployment, and business related tasks are done by me.
                   </Text>
                   <Text style={{ color: '#ffffff' }}>Satisfy your wild.</Text>
                 </div>
