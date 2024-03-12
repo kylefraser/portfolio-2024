@@ -75,7 +75,7 @@ const Modal = (props: {
             className={`${
               active &&
               open &&
-              'fixed z-20 left-[50%] top-[50%] overflow-hidden min-w-[300px] md:p-20 xl:p-32'
+              'fixed z-20 left-[50%] top-[50%] overflow-hidden min-w-[300px] max-w-[80vh]'
             }`}
             style={{ transform: 'translateY(-50%) translateX(-50%)' }}
           >
