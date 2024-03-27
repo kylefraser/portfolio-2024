@@ -61,7 +61,6 @@ export default function Home() {
     },
   };
 
-  // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
     setMounted(true);
   }, []);
