@@ -164,7 +164,7 @@ export default function Home() {
           >
             <Heading3>Mission</Heading3>
             <Text>
-              To leverage and continually expand my skill set in an effective and
+              To leverage and continually expand my skillset in an effective and
               efficient manner as a member of a proficient team with strong
               culture towards providing a well thought out and innovative
               product.
@@ -513,6 +513,7 @@ export default function Home() {
                 offset={offset}
                 height={show === 'crowdsurfer' ? 'auto' : 0}
                 style={{
+                  marginTop: show === 'crowdsurfer' ? 32 : 0,
                   marginBottom: show === 'crowdsurfer' ? 32 : 0,
                   backgroundColor: '#171717',
                   left: `calc(-${offset + 52}px)`,
@@ -565,7 +566,79 @@ export default function Home() {
                     height="981"
                   />
                 </div>
-              </Process>              
+              </Process>
+              {/* <List.Item>
+                Ordnance
+                <List.Text>
+                  A comprehensive ledger for the MIL/LEO professional. Keep
+                  track of firearm data, items on hand, and build
+                  specifications. Record and chart your progression through a
+                  number of different training scenarios. Add your team and
+                  compete to see who has the best times, accuracy, and
+                  precision.
+                </List.Text>
+                <Button
+                  onClick={() =>
+                    show !== 'ordnance' ? setShow('ordnance') : setShow('')
+                  }
+                  style={{ marginTop: '1rem' }}
+                >
+                  {show !== 'ordnance' ? 'View More' : 'View Less'}
+                </Button>
+              </List.Item>
+              <Process
+                offset={offset}
+                height={show === 'ordnance' ? 'auto' : 0}
+                style={{
+                  marginBottom: show === 'ordnance' ? 32 : 0,
+                  backgroundColor: '#3c442e',
+                  left: `calc(-${offset + 52}px)`,
+                  position: 'relative',
+                }}
+                duration={250}
+              >
+                <div className="max-w-4xl">
+                  <Image
+                    alt="Ordnance"
+                    src={'images/ordnance-logo.svg'}
+                    width="316"
+                    height="58"
+                    className="mb-3"
+                  />
+                  <Text style={{ color: '#ffffff' }}>
+                    This project started after speaking with some of my closest
+                    friends, who are military & LEO veterans. Together, we
+                    believe we can make an impact in enhancing the standards of
+                    today's professionals. The premise of this application is to
+                    incorporate data keeping, training analytics, and perhaps
+                    most importantly — safety education.
+                  </Text>
+                  <Text style={{ color: '#ffffff', marginBottom: 48 }}>
+                    This project uses Expo and Typescript, built on a Node
+                    Express backend.
+                  </Text>
+                </div>
+                <div className="grid grid-cols-3">
+                  <Image
+                    alt="Ordnance"
+                    src="/images/ordnance/ordnance-iphone-1.webp"
+                    width="649"
+                    height="981"
+                  />
+                  <Image
+                    alt="Ordnance"
+                    src="/images/ordnance/ordnance-iphone-2.webp"
+                    width="649"
+                    height="981"
+                  />
+                  <Image
+                    alt="Ordnance"
+                    src="/images/ordnance/ordnance-iphone-3.webp"
+                    width="649"
+                    height="981"
+                  />
+                </div>
+              </Process>
               <List.Item>
                 Denxity
                 <List.Text>
@@ -626,7 +699,78 @@ export default function Home() {
                     height="1200"
                   />
                 </div>
-              </Process>              
+              </Process>
+              <List.Item>
+                Kilo Concepts
+                <List.Text>
+                  Maximizing operator capabilities by utilizing advanced
+                  techniques to create solutions that are stronger, lighter, and
+                  more adaptable to meet the requirements of the harshest
+                  environments.
+                </List.Text>
+                <Button
+                  onClick={() =>
+                    show !== 'kilo' ? setShow('kilo') : setShow('')
+                  }
+                  style={{ marginTop: '1rem' }}
+                >
+                  {show !== 'kilo' ? 'View More' : 'View Less'}
+                </Button>
+              </List.Item>
+              <Process
+                offset={offset}
+                height={show === 'kilo' ? 'auto' : 0}
+                style={{
+                  marginTop: show === 'kilo' ? 32 : 0,
+                  marginBottom: show === 'kilo' ? 32 : 0,
+                  backgroundColor: '#181C13',
+                  left: `calc(-${offset + 52}px)`,
+                  position: 'relative',
+                }}
+                duration={250}
+              >
+                <div className="max-w-4xl">
+                  <Image
+                    alt="Kilo Concepts"
+                    src={'images/kilo-logo.svg'}
+                    width="125"
+                    height="41"
+                    className="mb-3"
+                  />
+                  <Text style={{ color: '#ffffff' }}>
+                    Kilo Concepts is a home for one of my newest hobbies, CAD
+                    design. I use a Bambu Lab X1 printer for high quality
+                    prototypes and Fusion 360 to design complex parts, both in
+                    2D and 3D.
+                  </Text>
+                  <Text style={{ color: '#ffffff' }}>
+                    The underlying concept that guides my design is to innovate
+                    using additive manufacturing processes to create better end
+                    user experiences. This is achieved by continuously testing
+                    and evaluating prototypes, refining designs, and
+                    incorporating the latest standards.
+                  </Text>
+                  <Text style={{ color: '#ffffff', marginBottom: 48 }}>
+                    If a new product does not offer lighter weight, higher
+                    reliability, and better durability, does it really warrant
+                    replacing the current system.
+                  </Text>
+                </div>
+                <div className="grid grid-cols-2">
+                  <Image
+                    alt="Kilo"
+                    src="/images/kilo/kilo-concepts-1.webp"
+                    width="1600"
+                    height="1200"
+                  />
+                  <Image
+                    alt="Kilo"
+                    src="/images/kilo/kilo-concepts-2.webp"
+                    width="1600"
+                    height="1200"
+                  />
+                </div>
+              </Process> */}
             </List>
             <Heading3>Education</Heading3>
             <List>
