@@ -567,7 +567,7 @@ export default function Home() {
                   />
                 </div>
               </Process>
-              {/* <List.Item>
+              <List.Item>
                 Ordnance
                 <List.Text>
                   A comprehensive ledger for the MIL/LEO professional. Keep
@@ -639,6 +639,7 @@ export default function Home() {
                   />
                 </div>
               </Process>
+              {/*
               <List.Item>
                 Denxity
                 <List.Text>
@@ -700,6 +701,7 @@ export default function Home() {
                   />
                 </div>
               </Process>
+              */}
               <List.Item>
                 Kilo Concepts
                 <List.Text>
@@ -770,7 +772,7 @@ export default function Home() {
                     height="1200"
                   />
                 </div>
-              </Process> */}
+              </Process>
             </List>
             <Heading3>Education</Heading3>
             <List>
