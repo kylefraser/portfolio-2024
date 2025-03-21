@@ -207,7 +207,7 @@ export default function Home() {
                 >
                   Starburst Data
                 </a>{' '}
-                - Senior Web Developer
+                - Lead Web Developer
                 <List.Text>
                   Maintain and enhance web properties with development and
                   design. Implement personalization, progressive profiling,
